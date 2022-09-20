@@ -1,7 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import { createServer } from "http";
-import { Server } from "socket.io";
 import * as path from 'path';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -15,11 +14,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cors()) //config cors so that front-end can use
 app.options('*', cors())
-
 const httpServer = createServer(app);
-const io = new Server(httpServer, {cors: {
-    origin: "*",
-  }},);
 
 //Configure public folder
 var clientDir = path.join(__dirname, 'public');
@@ -100,3 +95,5 @@ app.delete('/waiting/:uuid', async function (req, res) {
 httpServer.listen(3000, () => {
     console.log('listening on *:3000');
 });
+
+export default app;
