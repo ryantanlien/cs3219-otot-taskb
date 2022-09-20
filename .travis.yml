@@ -1,3 +1,4 @@
 language: node_js
 node_js: 17
-before_script: cd ./cs3219-otot-taskb1-deployed/matching-service/
+before_install: cd ./cs3219-otot-taskb1-deployed/matching-service/
+install: npm i
