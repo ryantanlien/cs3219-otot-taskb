@@ -4,16 +4,18 @@ services:
   - postgresql
 addons:
   postgresql: "13.7"
-apt:
-  packages:
-  - postgresql-13
-  - postgresql-client-13
+  apt:
+    packages:
+    - postgresql-13
+    - postgresql-client-13
 env: 
+  global:
+    - PGPORT=5433
 - AWS_DB_ENDPOINT=localhost
 - AWS_DB_USER=postgres
 - AWS_DB=matchdb
 - AWS_DB_PASSWORD= 
-- AWS_DB_PORT=5432
+- AWS_DB_PORT=5433
 before_script:
   - psql -c 'create database matchdb;' -U postgres -p 5433
   - sudo -u postgres psql < fill_db.sql
