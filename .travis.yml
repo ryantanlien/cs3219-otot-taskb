@@ -18,7 +18,7 @@ env:
   - AWS_DB_PORT=5433
 before_script:
   - psql -c 'create database matchdb;' -U postgres -p 5433
-  - sudo -u postgres psql < fill_db.sql
+  - sudo -u postgres psql < ./fill_db.sql
 
 before_install: 
 - cd ./cs3219-otot-taskb1-deployed/matching-service/
