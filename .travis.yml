@@ -1,5 +1,5 @@
 language: node_js
-node_js: 18
+node_js: 17
 jobs:
   include:
     - script: cd ./cs3219-otot-taskb1-deployed/matching-service/
