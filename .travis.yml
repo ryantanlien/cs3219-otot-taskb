@@ -2,4 +2,4 @@ language: node_js
 node_js: 17
 before_install: cd ./cs3219-otot-taskb1-deployed/matching-service/
 install: npm i
-before_script: sudo lsof -i:5432s
+before_script: sudo lsof -i:5432
