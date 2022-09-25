@@ -30,4 +30,16 @@ before_install:
   /etc/postgresql/13/main/pg_hba.conf
 # Restart the PostgreSQL service:
 - sudo service postgresql@13-main restart
+
 install: npm i
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id:
+    secure: "d9dLW39CeZd/ilSgK/d1rHUhqxgzgFdiNVjVoUNpNxOq3zSed964nyZg3CEv80s2uBvtXHgN3TjISnAdCYiuTZu+xHGzStee4oi1vV9P1Phglcm4Fhk9/utcNKxx5MD7ZAGV0+PvZznlwc6Nzg16+RoDtJerAVdE/QTHEQ2uq6BzEwrOVIuCQRAGyNiaUthTSTLNb990WG/Tvomqit7p8qZN7z4IMFSJaaZ9P+0ez58C1R049RluVpDsqPzFuXzxI+K71kCxihRx1DLvlwMND1pXfRB784ZGd0leJX2omr/nxvIdrBXoi01BPVCy47UQQvTGv0Um1ie4ukN5ilYxD8SRmjf1CflrI9L8DNWxOuxotXByOiqsVR0Lp3zXbz20YUvY6c6WzRSpBWr/HMiwfR8I0jxaDtTa7KsIx6TWhfBrEEW+Zp+okis/pWxu5U4YB5iAwAM1hBWxL53t4kljN3k1/pwGjg6JwWiPoXJRMGqRpY8dqT+CRKT5bmk1tckUNxDQwfaTvMF7j3sroH+xpfsy2OaUCVDRri5LX5bAOyyxT3IaN/vaRWEnCfypw/AahFOBNNDN4MfgdfWwrjTXahl3QyCwD4whRbCIyOjurCPU+BZX7EiVBDKR9Dw68ZRisz/uCuc0R5CGRymLPa3wVmRD2mq8sqPVnNeg4FuoDwY="
+  secret_access_key:
+    secure: "cxH4hLXo+Ak4M/MgrWD6YgmXIaO3ytSqK4kT66cdC/sJtXbxZD8wnuHdVLfMT8f+qBM0qUbiMuU2WBX+RJWJTcLI4Z2vb9mhG8HlQu3ZKXmyuYm4O0g1tBxP/vLBXS/TsPtgTCTlKD8VvPVIz0PUCZfCy5Bc4CuB4bm3O7cXi8Vmok7dFMQBTRHABtKS7le8ojTVOxzAlJqLO/cJt852CP6+O4Qp4WMVDk9bJd2I5dg28t5qyjvHqGllQOR/hi6Lquha6XJQYEBsHF1qES2zzcWUhqlZ0mf3XzRUJVZjmEZe7M2nLcefVWc7NzA33IBLjdNvtE65sUUYzjgC6DOWk/j21V7W7/9123qZi0xlnqbIVlmBHpYJtea30QjOWUmunK/+1pV6TPThA05Aor6tfY89naOoLC8p9ABdHV7JP2wV2BVYw+b03z5yTwJ/UA01Ea5N8xj+btfwpDDVPId1B7M8yXfGh6OLKPUh3W7KcY4rVwJ/PrMUGtguMUx/XlqnOCuBI3aSKIuj2Ro57BJ60VuSn5lx4p6P6/nz6BXHGf9tlzGzDzIcH9N7u/Vy2lwIqOoVtLjMzsmsBpPBwP/n9o8uh74gK8jUNTe8vAuO5Ef1pHI3zZeN6MPu4OI5iDPvBR+MBo8zTuAb/MktAz0E/zyo/qn3ovSkDTpKEDx/ysQ="
+  region: "ap-southeast-1"
+  app: "cs3219ototb"
+  env: "Cs3219ototb-env"
+  bucket_name: " 	elasticbeanstalk-ap-southeast-1-031478831492"
