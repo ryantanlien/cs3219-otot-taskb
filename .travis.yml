@@ -42,6 +42,6 @@ deploy:
   region: "ap-southeast-1"
   app: "cs3219ototb"
   env: "Cs3219ototb-env"
-  bucket_name: " 	elasticbeanstalk-ap-southeast-1-031478831492"
+  bucket_name: "elasticbeanstalk-ap-southeast-1-031478831492"
   on: 
     branch: main
